@@ -2,7 +2,7 @@
 
 A minimalist desktop app built with Electron and SQLite to manage projects and tasks with ease. Designed with a developer-first dark UI, kanban and table views, and modular categories.
 
----
+View [Demo](https://sammy-john.github.io/project-manager-app/)
 
 ## 🚀 Features
 
@@ -15,7 +15,6 @@ A minimalist desktop app built with Electron and SQLite to manage projects and t
 - 🔐 All data stored locally in SQLite (no cloud required)
 - 🖥️ Cross-platform support (Windows, macOS, Linux)
 
----
 
 ## 🛠️ Tech Stack
 
@@ -24,7 +23,6 @@ A minimalist desktop app built with Electron and SQLite to manage projects and t
 - [SQLite3](https://www.sqlite.org/index.html)
 - Vanilla JS + Modular CSS (Inter + JetBrains Mono)
 
----
 
 ## 📂 Project Structure
 
@@ -70,17 +68,12 @@ npx knex migrate:latest
 npx knex seed:run
 ```
 
----
-
 ## [`🗺 Roadmap`](ROADMAP.md)
-
----
 
 ## 📄 License
 
 Licensed under the [Apache 2.0 License](LICENSE).
 
----
 
 ## ✍️ Author
 
