@@ -1,0 +1,73 @@
+:root {
+    /* ==================== 🎨 COLOR PALETTE ==================== */
+    --color-bg: #1e1e2e;               /* Main background */
+    --color-bg-alt: #2a2a3b;           /* Secondary background / cards */
+    --color-surface: #313244;          /* Panels / modals / input fields */
+    --color-border: #45475a;           /* Borders and separators */
+  
+    --color-primary: #89b4fa;          /* Accent - Primary buttons, links */
+    --color-primary-hover: #739fd9;
+  
+    --color-secondary: #cba6f7;        /* Secondary accent (e.g. icons) */
+    --color-tertiary: #f38ba8;         /* Alerts / critical highlights */
+  
+    --color-text-main: #cdd6f4;        /* Main body text */
+    --color-text-muted: #a6adc8;       /* Muted/secondary text */
+    --color-text-inverse: #1e1e2e;     /* Text on bright background */
+    --color-text-danger: #f38ba8;
+  
+    --color-success: #a6e3a1;
+    --color-warning: #fab387;
+    --color-info: #89dceb;
+    --color-danger: #f38ba8;
+  
+    /* ==================== 🧱 TYPOGRAPHY ==================== */
+    /* Typography Fonts */
+  --font-ui: 'JetBrains Mono', monospace;  /* Use for UI elements: task titles, buttons, labels, inputs */
+  --font-body: 'Inter', sans-serif;        /* Use for general body text, descriptions, paragraphs */
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;   /* Extra small (labels, badges) */
+  --font-size-sm: 0.875rem;  /* Small text (captions, metadata) */
+  --font-size-md: 1rem;      /* Base text (body, buttons, inputs) */
+  --font-size-lg: 1.25rem;   /* Large text (subheadings) */
+  --font-size-xl: 1.5rem;    /* Extra large (headings, titles) */
+
+  /* Font Weights */
+  --font-weight-regular: 400;  /* Normal weight (body, input text) */
+  --font-weight-medium: 500;   /* Medium weight (buttons, emphasis) */
+  --font-weight-bold: 700;     /* Bold weight (headings, section titles) */
+  
+    /* ==================== 📐 SPACING SYSTEM ==================== */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+  
+    /* ==================== 🔲 BORDER RADIUS ==================== */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+  
+    /* ==================== ✨ EFFECTS ==================== */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4);
+  
+    --transition-fast: 0.2s ease-in-out;
+    --transition-slow: 0.4s ease-in-out;
+  
+    /* ==================== 📱 BREAKPOINTS ==================== */
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+  
+    /* ==================== ⚙️ Z-INDEX LAYERS ==================== */
+    --z-tooltip: 1000;
+    --z-modal: 1100;
+    --z-popover: 1200;
+    --z-overlay: 1300;
+  }
+  

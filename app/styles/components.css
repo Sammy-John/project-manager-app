@@ -1,0 +1,444 @@
+/* ==================================================
+   🔔 ALERTS
+   ================================================== */
+   .alert-box {
+    display: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .alert-box.due-alert {
+    background-color: var(--color-warning);
+    color: var(--color-text-inverse);
+    border: 1px solid var(--color-border);
+  }
+  
+  .alert-box.urgent-alert {
+    background-color: var(--color-danger);
+    color: var(--color-info);
+    border: 1px solid var(--color-border);
+  }
+  
+  
+  /* ==================================================
+     🧩 FORM ELEMENTS
+     ================================================== */
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: var(--font-size-md);
+    font-family: var(--font-body);
+    background-color: var(--color-surface);
+    color: var(--color-text-main);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-text-muted);
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .form-field label {
+    font-size: var(--font-size-sm);
+    font-family: var(--font-ui);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--spacing-sm);
+  }
+  
+  /* ========== FORM SECTION WRAPPER ========== */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  
+  /* ==================================================
+     🔘 BUTTONS
+     ================================================== */
+  button {
+    padding: 0.5rem 1rem;
+    font-family: var(--font-ui);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-inverse);
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+  }
+  
+  button:hover {
+    background-color: var(--color-primary-hover);
+  }
+  
+  button.delete-button {
+    background-color: var(--color-danger);
+  }
+  
+  button.delete-button:hover {
+    background-color: #e85c75;
+  }
+  
+  button.secondary {
+    background-color: var(--color-secondary);
+  }
+  
+  button.secondary:hover {
+    background-color: var(--color-secondary-dark);
+  }
+  
+  
+  /* ==================================================
+     🗂️ PROJECT LIST & CARDS
+     ================================================== */
+  .project-list {
+    margin-top: var(--spacing-lg);
+  }
+  
+  .project-list h3 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-main);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .project-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .project-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .project-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-main);
+    margin: 0;
+  }
+  
+  .project-category {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 2px 6px;
+    width: fit-content;
+  }
+  
+  .project-actions {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+  }
+  
+  .project-desc {
+    margin: var(--spacing-sm) 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+  
+  .task-summary {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+  
+  
+  /* ==================================================
+     🏷️ TAGS
+     ================================================== */
+  .priority-low    { color: var(--color-success); }
+  .priority-medium { color: var(--color-warning); }
+  .priority-high   { color: var(--color-danger); }
+  .priority-urgent { color: var(--color-danger); font-weight: bold; }
+  
+  .overdue {
+    background-color: var(--color-error-bg);
+  }
+  
+  
+  /* ==================================================
+     ❓ HELP ICON
+     ================================================== */
+  .help-icon {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+  }
+  
+  .help-icon:hover {
+    color: var(--color-text-main);
+  }
+  
+  
+  /* ==================================================
+     🪟 MODALS
+     ================================================== */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: var(--z-modal);
+    inset: 0;
+    background-color: rgba(30, 30, 46, 0.8);
+    backdrop-filter: blur(4px);
+    overflow-y: auto;
+  }
+  
+  .modal-content {
+    background-color: var(--color-surface);
+    margin: 5% auto;
+    padding: var(--spacing-lg);
+    max-width: 600px;
+    width: 90%;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    color: var(--color-text-main);
+    font-family: var(--font-body);
+  }
+  
+  .modal-content h2 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-ui);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .modal-content p {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .modal-content strong {
+    color: var(--color-secondary);
+  }
+  
+  .close {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+  }
+  
+  .close:hover {
+    color: var(--color-danger);
+  }
+  
+  /* ========== TOOLBAR LAYOUT ========== */
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .toolbar-group {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+  }
+  
+  /* Optional: Add subtle divider between groups */
+  .toolbar-group:not(:first-child) {
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-border);
+  }
+  
+  /* ========== TASK FORM ========== */
+.task-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+  }
+  
+/* ========== TASK TABLE WRAPPER ========== */
+.task-table-wrapper {
+    margin-top: var(--spacing-lg);
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+  }
+  
+  /* ========== TABLE BASE STYLES ========== */
+  .task-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  
+  /* ========== TABLE HEAD ========== */
+  .task-table thead {
+    background-color: var(--color-bg-alt);
+  }
+  
+  .task-table th {
+    text-align: left;
+    padding: var(--spacing-sm);
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-ui);
+    color: var(--color-text-muted);
+    border-bottom: 1px solid var(--color-border);
+    white-space: nowrap;
+  }
+  
+  /* ========== CELL BASE STYLES ========== */
+  .task-table td {
+    padding: var(--spacing-xs);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+    color: var(--color-text-main);
+    word-break: break-word;
+  }
+
+  /* Zebra rows */
+  .task-table tr:nth-child(even) td {
+    background-color: var(--color-bg);
+  }
+  
+  /* Hover rows */
+  .task-table tr:hover td {
+    background-color: var(--color-bg-alt);
+  }
+  
+  /* ========== COLUMN WIDTHS ========== */
+  .task-table th:nth-child(1), .task-table td:nth-child(1) { width: 28%; } /* Title */
+  .task-table th:nth-child(2), .task-table td:nth-child(2) { width: 18%; } /* Category */
+  .task-table th:nth-child(3), .task-table td:nth-child(3) { width: 14%; white-space: nowrap; } /* Priority */
+  .task-table th:nth-child(4), .task-table td:nth-child(4) { width: 14%; } /* Deadline */
+  .task-table th:nth-child(5), .task-table td:nth-child(5) { width: 14%; white-space: nowrap; } /* Status */
+  .task-table th:nth-child(6), .task-table td:nth-child(6) { width: 12%; text-align: right; } /* Actions */
+  
+  /* ========== INPUT FIELDS ========== */
+  .task-table input[type="text"],
+  .task-table input[type="date"],
+  .task-table select {
+    width: 100%;
+    font-size: var(--font-size-sm);
+    font-family: var(--font-body);
+    padding: 6px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    color: var(--color-text-main);
+    box-sizing: border-box;
+    min-height: 32px;
+    line-height: 1.4;
+  }
+  
+  /* ========== ACTION BUTTONS ========== */
+/* Make Actions column non-flex to maintain layout */
+.task-table td:last-child {
+    text-align: right;
+    padding: var(--spacing-xs);
+    white-space: nowrap;
+  }
+  
+  .task-table button {
+    padding: 5px 10px;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-ui);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+  }
+  
+  /* View Button */
+  .task-table .view-button {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+  .task-table .view-button:hover {
+    background-color: var(--color-primary-hover);
+  }
+  
+  /* Delete Button */
+  .task-table .delete-button {
+    background-color: var(--color-danger);
+    color: var(--color-text-inverse);
+  }
+  .task-table .delete-button:hover {
+    background-color: #e85c75;
+  }
+  
+/* Wrap buttons inside a container for flex layout */
+.task-actions {
+    display: inline-flex;
+    gap: var(--spacing-xs);
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  /* ========== OVERDUE ========== */
+  .task-table .overdue {
+    background-color: rgba(243, 139, 168, 0.15);
+    color: var(--color-danger);
+  }
+  

@@ -1,0 +1,77 @@
+/* ===== Layout Styles ===== */
+
+/* Container for full screen sections */
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Central content wrapper */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--color-bg-alt);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+}
+
+/* Section headers */
+h1, h2, h3, h4 {
+    font-family: var(--font-ui);
+    color: var(--color-secondary);
+    margin-bottom: 0.75rem;
+}
+
+/* ===== FORM LABELS ===== */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }  
+
+label {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-xs);
+    font-weight: var(--font-weight-medium);
+  }
+  
+  /* Label + help icon row */
+  label .help-icon {
+    display: inline-block;
+    margin-left: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    vertical-align: middle;
+  }
+  
+  /* Input section block */
+.input-group {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+
+/* Footer placeholder */
+footer {
+    padding: 1rem 2rem;
+    text-align: center;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}

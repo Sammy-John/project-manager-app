@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- 🌱 Modular CSS Imports -->
+    <link rel="stylesheet" href="styles/root.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Edit Project</h1>
+        <!-- 🔧 Project Info Form -->
+<div class="form-section">
+    <div class="form-field">
+      <label for="project-title">Project Name</label>
+      <input type="text" id="project-title" placeholder="Enter project name">
+    </div>
+  
+    <div class="form-field">
+      <label for="project-desc">Project Description</label>
+      <textarea id="project-desc" placeholder="Enter project description"></textarea>
+    </div>
+  
+    <div class="form-field">
+      <label for="edit-project-category">
+        Project Category
+        <span class="help-icon" onclick="openCategoryHelp()">❓</span>
+      </label>
+      <select id="edit-project-category"></select>
+    </div>
+  
+    <div class="form-actions">
+      <button onclick="updateProject()">💾 Save</button>
+    </div>
+  </div>
+  
+
+       <!-- 🔄 View Toggle -->
+<div class="toolbar">
+    <div class="toolbar-group">
+      <button onclick="showTableView()">📋 Table View</button>
+      <button onclick="showKanbanView()">📌 Kanban View</button>
+    </div>
+  
+    <!-- 🧪 Task Filters -->
+    <div class="toolbar-group">
+      <button onclick="loadTasks('all')">📋 All Tasks</button>
+      <button onclick="loadTasks('incomplete')">❌ Incomplete</button>
+      <button onclick="loadTasks('completed')">✅ Completed</button>
+      <button onclick="loadTasks('overdue')">⏳ Overdue</button>
+    </div>
+  
+    <!-- 🧩 Sorting -->
+    <div class="toolbar-group">
+      <button onclick="sortBy('priority')">🔥 Sort by Priority</button>
+      <button onclick="sortBy('deadline')">⏳ Sort by Deadline</button>
+    </div>
+  </div>
+  
+  <h3>Add New Task</h3>
+
+  <form class="task-form" onsubmit="event.preventDefault(); addTask();">
+    <!-- 📝 Task Title -->
+    <div class="form-field">
+      <label for="new-task-title">Task Title</label>
+      <input type="text" id="new-task-title" placeholder="Enter task title" required />
+    </div>
+  
+    <!-- 🗂 Task Category -->
+    <div class="form-field">
+      <label for="new-task-category">
+        Task Category
+        <span class="help-icon" onclick="openTaskCategoryHelp()">❓</span>
+      </label>
+      <select id="new-task-category" required>
+        <option value="">Select Category</option>
+      </select>
+    </div>
+  
+    <!-- 🔥 Priority -->
+    <div class="form-field">
+      <label for="new-task-priority">Priority</label>
+      <select id="new-task-priority">
+        <option value="Low">Low</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="High">High</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+    </div>
+  
+    <!-- ⏳ Deadline -->
+    <div class="form-field">
+      <label for="new-task-deadline">Deadline</label>
+      <input type="date" id="new-task-deadline" />
+    </div>
+  
+    <!-- 📌 Status -->
+    <div class="form-field">
+      <label for="new-task-status">Status</label>
+      <select id="new-task-status">
+        <option value="To-Do" selected>To-Do</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+    </div>
+  
+    <!-- ➕ Add Button -->
+    <div class="form-actions">
+      <button type="submit">➕ Add Task</button>
+    </div>
+  </form>
+  
+  <!-- Task Category Help Modal -->
+<div id="task-category-help-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeTaskCategoryHelp()">&times;</span>
+      <h2>Task Categories Explanation</h2>
+      <p>Here are the different task categories and their meanings:</p>
+      <ul id="task-category-explanation-list"></ul>
+    </div>
+  </div>
+  
+<!-- 📋 Task Table View -->
+<div id="table-view" class="task-table-wrapper">
+    <h3>Tasks</h3>
+  
+    <div class="table-scroll">
+      <table class="task-table">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Category</th>
+            <th>Priority</th>
+            <th>Deadline</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="task-list"></tbody>
+      </table>
+    </div>
+  </div>
+  
+
+        <!-- Kanban Board -->
+        <div id="kanban-view" class="kanban-board">
+            <div class="kanban-column" id="To-Do">
+                <h3>📝 To-Do</h3>
+                <div id="todo-tasks" class="task-list"></div>
+            </div>
+            
+            <div class="kanban-column" id="In Progress">
+                <h3>⏳ In Progress</h3>
+                <div id="in-progress-tasks" class="task-list"></div>
+            </div>
+            
+            <div class="kanban-column" id="Completed">
+                <h3>✅ Completed</h3>
+                <div id="completed-tasks" class="task-list"></div>
+            </div>
+            
+        </div>
+
+        <button onclick="goBack()">⬅️ Back to Projects</button>
+    </div>
+
+    <script src="project.js"></script>
+    <script src="kanban.js"></script> <!-- ✅ Load this last -->
+
+</body>
+</html>
